@@ -17,11 +17,11 @@ const theme = createTheme();
 export function Add() {
   const navigate = useNavigate();
   const {id} = useParams();
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [POI, setPOI]=useState('')
-  const [dateRange, setDateRange] = useState('')
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [poi, setPOI]=useState('');
+  const [dateRange, setDateRange] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,7 +31,7 @@ export function Add() {
       firstName: data.get('firstName'),
       lastName: data.get('lastName'),
       email:data.get('email'),
-      POI:data.get('POI'),
+      poi:data.get('poi'),
       dateRange: data.get('dateRange')
     };
     
@@ -71,7 +71,7 @@ export function Add() {
                   onChange= {(e) => setFirstName(e.target.value)}
                   id="firstName"
                   label="First Name"
-                  autoFocus
+                  // autoFocus
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -100,13 +100,13 @@ export function Add() {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="given-POI"
+                  autoComplete="given-poi"
                   required
                   fullWidth
-                  value={POI}
+                  value={poi}
                   onChange= {(e) => setPOI(e.target.value)}
-                  id="POI"
-                  name="POI"
+                  id="poi"
+                  name="poi"
                   label="POI"
                   autoFocus
                 />

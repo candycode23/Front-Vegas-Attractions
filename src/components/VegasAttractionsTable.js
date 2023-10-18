@@ -87,7 +87,7 @@ export const VegasAttractionsTable = () => {
                                         {vegasAttractions.email}
                                     </TableCell>
                                     <TableCell>
-                                        {vegasAttractions.POI}
+                                        {vegasAttractions.poi}
                                     </TableCell>
                                     <TableCell>
                                         {vegasAttractions.dateRange}

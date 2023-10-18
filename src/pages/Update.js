@@ -21,7 +21,7 @@ export const Update = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
-  const [POI, setPOI] = useState('')
+  const [poi, setPOI] = useState('')
   const [dateRange, setDateRange] = useState('')
 
   useEffect(()=> {
@@ -31,7 +31,7 @@ export const Update = () => {
        setFirstName(user.firstName);
        setLastName(user.lastName);
        setEmail(user.email);
-       setPOI(user.POI);
+       setPOI(user.poi);
        setDateRange(user.dateRange);
     })
   },[]);
@@ -43,7 +43,7 @@ export const Update = () => {
       firstName: data.get('firstName'),
       lastName: data.get('lastName'),
       email:data.get('email'),
-      POI:data.get('POI'),
+      POI:data.get('poi'),
       dateRange:data.get('dateRange'),
     };
 
@@ -109,13 +109,13 @@ export const Update = () => {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="given-POI"
+                  autoComplete="given-poi"
                   name="POI"
                   required
                   fullWidth
-                  value={POI}
+                  value={poi}
                   onChange= {(e) => setPOI(e.target.value)}
-                  id="POI"
+                  id="poi"
                   label="POI"
                   autoFocus
                 />
